@@ -1,6 +1,6 @@
 [project]
 name = "weather-mcp-server"
-version = "1.0.0"
+version = "1.0.1"
 description = "A weather MCP server built with FastMCP"
 authors = [
     { name = "qianyan", email = "qianyan.lambda@gmail.com" },
