@@ -53,4 +53,4 @@ select = [
 ]
 
 [project.scripts]
-weather-mcp-server = "weather_mcp_server.server:main" 
+weather-mcp-server = "weather_mcp_server:main"
