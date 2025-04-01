@@ -33,6 +33,8 @@ build-backend = "hatchling.build"
 [project.optional-dependencies]
 dev = [
     "ruff>=0.11.2",
+    "build",
+    "twine",
 ]
 
 [tool.hatch.build.targets.wheel]
@@ -53,4 +55,4 @@ select = [
 ]
 
 [project.scripts]
-weather-mcp-server = "weather_mcp_server:main"
+weather-mcp-server = "weather_mcp_server.server:main"

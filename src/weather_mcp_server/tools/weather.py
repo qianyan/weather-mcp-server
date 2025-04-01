@@ -29,7 +29,7 @@ class WeatherTools:
     def register_tools(self, mcp: FastMCP):
         """注册 MCP 工具"""
 
-        @mcp.tool("获取指定城市的天气信息")
+        @mcp.tool(description="获取指定城市的天气信息")
         def get_weather(city: str, units: Optional[str] = "metric") -> Dict:
             """
             获取指定城市的天气信息

@@ -30,16 +30,16 @@ release:
 		tomli_w.dump(data, open("pyproject.toml", "wb"))'
 	@git add pyproject.toml
 	@git commit -m "release: update version to $(version:v%=%)"
-	@git push origin main
 	@git tag $(version)
+	@git push origin main
 	@git push origin $(version)
 	@echo "Version updated and tag pushed."
 
 build: clean
-	python -m build
-
-publish: build
-	python -m twine upload dist/*
+	. .venv/bin/activate && python -m build
 
 publish-test: build
-	python -m twine upload --repository testpypi dist/* 
+	. .venv/bin/activate && python -m twine upload --repository testpypi dist/*
+
+publish: build
+	. .venv/bin/activate && python -m twine upload dist/* 
